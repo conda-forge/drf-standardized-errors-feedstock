@@ -1,5 +1,5 @@
 {% set name = "drf-standardized-errors" %}
-{% set version = "0.14.0" %}
+{% set version = "0.14.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 2cc6d5c89cbd1b9a45865c56d115b8b6dacd717319b132eeff1a24bdef9e2669
+  sha256: 0610dcd0096b75365102d276022a22e59a1f8db8825bb0bff05e1b7194ba145d
 
 build:
   noarch: python
