@@ -1,5 +1,5 @@
 {% set name = "drf-standardized-errors" %}
-{% set version = "0.14.1" %}
+{% set version = "0.15.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 0610dcd0096b75365102d276022a22e59a1f8db8825bb0bff05e1b7194ba145d
+  sha256: 83112d072e751eb444c2f16ab4618273b912cffc07f12b81998060fdfa2eb655
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -20,6 +20,8 @@ requirements:
     - flit-core >=3.2,<4
     - pip
   run:
+    - drf-spectacular
+    - inflection
     - python >={{ python_min }}
     - django >=3.2
     - djangorestframework >=3.12
